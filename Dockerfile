@@ -1,5 +1,5 @@
 # Use the latest Ubuntu base image
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 # Set the environment variable for non-interactive installation
 ENV DEBIAN_FRONTEND=noninteractive
@@ -14,7 +14,6 @@ RUN apt-get update && \
     micro \
     make \
     nasm \
-    qemu \
     git \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
