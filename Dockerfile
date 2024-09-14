@@ -14,6 +14,7 @@ RUN apt-get update && \
     micro \
     make \
     nasm \
+    qemu-system-x86 \
     git \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
