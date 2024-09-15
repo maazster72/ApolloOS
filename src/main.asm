@@ -11,4 +11,4 @@ main:
 	
 ; Ensures the boot sector is exactly 512 bytes long
 times 510-($-$$) db 0	; Fill the rest of the boot sector with zeros (up to 510 bytes)
-dw 0AA55h	; Boot signature (0xAA55), required for valid boot sector
+dw 0xAA55h	; Boot signature (0xAA55), required for valid boot sector
