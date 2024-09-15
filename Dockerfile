@@ -13,6 +13,7 @@ RUN apt-get update && \
     apt-get install -y \
     make \
     nasm \
+    git \
     qemu-system-x86 \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
