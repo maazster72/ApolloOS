@@ -11,11 +11,9 @@ ENV GIT_REPO=https://github.com/maazster72/ApolloOS.git
 # Update the package list and install the required packages
 RUN apt-get update && \
     apt-get install -y \
-    micro \
     make \
     nasm \
     qemu-system-x86 \
-    git \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
