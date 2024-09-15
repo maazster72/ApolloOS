@@ -4,6 +4,15 @@ bits 16	; Set processor to 16-bit mode (real mode)
 
 ; Entry point of the program
 main:
+	; Setup data segments
+	mov ax, 0	; We cannot write to ds/es directly so we use intermediary register
+	mov ds, ax
+	mov es, ax
+	
+	; Setup stack
+	mov ss, ax
+	mov sp, 0x7C00	; Set the stack pointer to the start of the stack at memory address 0x7C00
+
 	hlt	; Halt CPU execution
 	
 .halt:
